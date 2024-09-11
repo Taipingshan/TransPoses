@@ -13,7 +13,7 @@ baudrate = 921600
 lpmsb = LpmsB2.LpmsB2(port, baudrate)
 quit = False
 
-# Test settings
+# Test settings`    `
 test_duration = 30 #seconds
 stream_frequency = 200
 dt = 1.0/stream_frequency*1.5

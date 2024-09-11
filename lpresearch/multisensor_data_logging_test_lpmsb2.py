@@ -150,7 +150,7 @@ def main():
     port2 = 'COM3'  #EF 右手 2
     port3 = 'COM6'  #62 左腿 3
     port4 = 'COM13'   #F3 右腿 4
-    port5 = 'COM7'     #10 头  5
+    port5 = 'COM17'     #10 头  5
     port6 = 'COM11' #E3 腰 6
     port1 = 'COM9' #35 左手  1
     baudrate = 115200
