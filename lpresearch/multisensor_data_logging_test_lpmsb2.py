@@ -147,12 +147,12 @@ def elapsedTimePrinter(Global):
 
 def main():
     # Settings
-    port2 = 'COM3'  #EF 右手 2
-    port3 = 'COM6'  #62 左腿 3
-    port4 = 'COM13'   #F3 右腿 4
-    port5 = 'COM17'     #10 头  5
-    port6 = 'COM11' #E3 腰 6
-    port1 = 'COM9' #35 左手  1
+    port2 = 'COM11'  #EF 右手 2
+    port3 = 'COM13'  #62 左腿 3
+    port4 = 'COM7'   #F3 右腿 4
+    port5 = 'COM9'     #10 头  5
+    port6 = 'COM5' #E3 腰 6
+    port1 = 'COM3' #35 左手  1
     baudrate = 115200
     sensor2Id = 'lpms2' #EF 右手
     sensor3Id = 'lpms3' #62 左腿
