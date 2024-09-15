@@ -190,7 +190,7 @@ stream_freq_menu = OrderedDict([
 
 ])
 
-port = 'COM106'
+port = 'COM3'
 baudrate = 115200
 
 lpmsSensor = LpmsME.LpmsME(port, baudrate)

@@ -27,7 +27,7 @@ def adaptive_filter(data, window_size):
 
 
 def sync_imu_process(path, num_frames=3000, num_imu=6):
-    data = pd.read_csv('./input/result.csv')
+    data = pd.read_csv('./input/20240912_204806_sensor.csv')
 
     acc_data = data.loc[:, ['AccX', 'AccY', 'AccZ']]
     acc_data = acc_data.apply(lambda x: x.str.strip() if x.dtype == "object" else x)

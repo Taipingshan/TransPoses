@@ -151,7 +151,7 @@ def main():
     port3 = 'COM13'  #62 左腿 3
     port4 = 'COM7'   #F3 右腿 4
     port5 = 'COM9'     #10 头  5
-    port6 = 'COM5' #E3 腰 6
+    port6 = 'COM6' #E3 腰 6
     port1 = 'COM3' #35 左手  1
     baudrate = 115200
     sensor2Id = 'lpms2' #EF 右手

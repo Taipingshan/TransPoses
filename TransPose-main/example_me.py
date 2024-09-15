@@ -6,10 +6,11 @@ from utils import normalize_and_concat
 import articulate as art
 
 
+
 # folder_path = './input/test3'
 # total_imu_acc_tensor, total_imu_rm_tensor = total_imu_process(folder_path, num_frames=4000, num_imu=6)
 # folder_path = './input/noitom_test/noitom3.csv'
-folder_path = './input/result.csv'
+folder_path = './input/20240912_204806_sensor.csv'
 # folder_path = './noitom/combined_file.csv'
 total_imu_acc_tensor, total_imu_rm_tensor = sync_imu_process(folder_path, num_frames=4000, num_imu=6)
 

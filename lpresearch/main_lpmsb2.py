@@ -5,7 +5,7 @@ import threading
 
 from lpmslib import LpmsB2
 from lpmslib import lputils
-
+import pandas as pd
 import openpyxl
 
 TAG="MAIN"
@@ -146,12 +146,12 @@ def pretty_print_sensor_data(sensor_data):
             ['%+.3f' % f for f in sensor_data[11]][0],
             ['%+.3f' % f for f in sensor_data[11]][1],
             ['%+.3f' % f for f in sensor_data[11]][2]]
-    workbook = openpyxl.load_workbook('D:\\data.xlsx')
+    workbook = openpyxl.load_workbook('data.xlsx')
     worksheet1 = workbook.get_sheet_by_name('Sheet1')
     global i
     worksheet1._current_row = i
     worksheet1.append(data)
-    workbook.save(filename='D:\\data.xlsx')
+    workbook.save(filename='E:\TransPoses\lpresearch\data.xlsx')
     i += 1
 
 printer_running = False
@@ -229,8 +229,8 @@ stream_freq_menu = OrderedDict([
 
 ])
 
-port = 'COM8'  #4 6 8 9 12 13
-baudrate = 14400
+port = 'COM3'  #4 6 8 9 12 13
+baudrate = 115200
 
 lpmsb = LpmsB2.LpmsB2(port, baudrate)
 quit = False
