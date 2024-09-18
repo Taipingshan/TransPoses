@@ -146,12 +146,14 @@ def pretty_print_sensor_data(sensor_data):
             ['%+.3f' % f for f in sensor_data[11]][0],
             ['%+.3f' % f for f in sensor_data[11]][1],
             ['%+.3f' % f for f in sensor_data[11]][2]]
-    workbook = openpyxl.load_workbook('data.xlsx')
-    worksheet1 = workbook.get_sheet_by_name('Sheet1')
+    
+    workbook = openpyxl.load_workbook('./lpresearch/35.xlsx')
+    worksheet1 = workbook.active
     global i
     worksheet1._current_row = i
     worksheet1.append(data)
-    workbook.save(filename='E:\TransPoses\lpresearch\data.xlsx')
+    workbook.save(filename='./lpresearch/35.xlsx')
+    workbook.close()
     i += 1
 
 printer_running = False
@@ -178,6 +180,7 @@ def printer():
     while not stop_printing:
         os.system('cls')
         sensor_data = lpmsb.get_latest_sensor_data()
+        
         pretty_print_sensor_data(sensor_data)
         time.sleep(.05)
 
