@@ -1,8 +1,0 @@
-# 蓝牙端口号对应
-
-EF COM11
-62 COM13
-35 COM3
-E3 COM6
-F3 COM7
-10 COM9 

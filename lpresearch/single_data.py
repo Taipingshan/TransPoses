@@ -43,7 +43,7 @@ def readSensorData2CSV(sensorIDstr, port, Global,Mydata):
         sensor.set_16bit_mode()
         sensor.set_filter_mode()
         # Set stream frequency
-        sensor.set_stream_frequency_100Hz()  #调整帧数
+        sensor.set_stream_frequency_400Hz()  #调整帧数
 
         # Put sensor in sync mode 
         sensor.start_sync()
@@ -108,6 +108,7 @@ def processdata(Global,Mydata):
 
 
 def elapsedTimePrinter(Global):
+
     start_time = time.time()
     while not Global['quit']:
 
@@ -120,9 +121,9 @@ def elapsedTimePrinter(Global):
 def main():
     # Settings
 
-    port = 'COM11' #35 左手  1
+    port = 'COM7' #35 左手  1
     baudrate = 115200
-    sensorId = 'EF' 
+    sensorId = 'F3' 
     dateTime = datetime.now().strftime("%Y%m%d_%H%M%S_")
 
     manager = multiprocessing.Manager()
@@ -131,6 +132,7 @@ def main():
     Global['quit'] = False
     Global['stopSync'] = False
     Global['baudrate'] = baudrate
+
     Global['FilePrefix'] = dateTime
     Global[sensorId] = False       # Sensor ready flag
     data = manager.list()
@@ -169,3 +171,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+    
